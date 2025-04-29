@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
   
-    // Toggle nav menu when hamburger is clicked
+    
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("active");
       hamburger.classList.toggle("open");
     });
   
-    // Optional: Close the menu when a link is clicked (on mobile)
+
     const navItems = document.querySelectorAll(".nav-links li a");
     navItems.forEach(item => {
       item.addEventListener("click", () => {

@@ -81,7 +81,7 @@ p {
   margin: 15px 0;
 }
 
-/* Gallery images */
+
 .image-gallery {
   display: flex;
   justify-content: center;
@@ -109,21 +109,21 @@ p {
   transform: scale(1.05);
 }
 
-/* Tablet view */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .image-item {
     max-width: 45%;
   }
 }
 
-/* Laptop and larger screens */
+
 @media (min-width: 1025px) {
   .image-item {
     max-width: 32%;
   }
 }
 
-/* Mobile nav and image adjustments */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -159,7 +159,7 @@ p {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #8b5e3c; /* Brown */
+  background-color: #8b5e3c; 
   color: white;
   font-size: 20px;
   border-radius: 8px;
