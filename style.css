@@ -1,127 +1,175 @@
-/* Reset and basic styling */
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fdf6f0; /* Soft light brown background */
-    color: #4b2e2e; /* Deep brown text */
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dancing Script', cursive;
+  background-color: #fdf6f0;
+  color: #4b2e2e;
+  text-align: center;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #8b5e3c; /* Dark brown navbar */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #6b4226; /* Darker brown on hover */
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+/* Main content styling */
+main {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #5a3825;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 26px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Gallery images */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.image-item {
+  flex: 1 1 300px;
+  max-width: 90%;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(139, 94, 60, 0.3);
+  transition: transform 0.3s;
+}
+
+.portfolio-image:hover {
+  transform: scale(1.05);
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-item {
+    max-width: 45%;
   }
-  
-  /* Navbar styling */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #8b5e3c; /* Dark brown navbar */
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1025px) {
+  .image-item {
+    max-width: 32%;
   }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Navigation links */
+}
+
+/* Mobile nav and image adjustments */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 8px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .nav-links li a:hover {
-    background-color: #6b4226; /* Darker brown on hover */
-    transform: scale(1.1);
-  }
-  
-  /* Hamburger Menu (hidden on desktop) */
-  .hamburger {
     display: none;
+    width: 100%;
     flex-direction: column;
-    cursor: pointer;
+    background-color: #8b5e3c;
+    margin-top: 15px;
+    padding: 10px 0;
   }
-  
-  .hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    border-radius: 5px;
-  }
-  
-  /* Main content styling */
-  main {
-    padding: 60px 20px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    color: #5a3825;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 15px 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-      background-color: #8b5e3c;
-      margin-top: 15px;
-      padding: 10px 0;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  
-    .nav-links li {
-      margin: 10px 0;
-    }
-  }
-  
-  /* Gallery images if you add later */
-  .image-gallery {
+
+  .nav-links.active {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 30px 0;
   }
-  
-  .gallery-image {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(139, 94, 60, 0.3);
-    transition: transform 0.3s;
+
+  .hamburger {
+    display: flex;
   }
-  
-  .gallery-image:hover {
-    transform: scale(1.05);
+
+  .nav-links li {
+    margin: 10px 0;
   }
-  
+
+  .image-item {
+    max-width: 100%;
+  }
+
+  .portfolio-image {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+}
+.project-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #8b5e3c; /* Brown */
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: 'Dancing Script', cursive;
+}
+
+.project-link:hover {
+  background-color: #6b4226;
+  transform: scale(1.05);
+}
+

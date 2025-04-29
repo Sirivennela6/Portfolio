@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <title>Home - Bala Siri Vennela</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
@@ -26,6 +27,24 @@
   <main>
     <h1>Welcome to My Portfolio</h1>
     <p>This is the homepage of Bala Siri Vennela's portfolio. Explore more!</p>
+
+    <div class="image-gallery">
+      <div class="image-item">
+        <img src="library.jpeg" alt="Library" class="portfolio-image"
+             srcset="library-small.jpeg 500w, library-medium.jpeg 1000w, library-large.jpeg 1500w"
+             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
+      </div>
+      <div class="image-item">
+        <img src="diy.jpg" alt="DIY Projects" class="portfolio-image"
+             srcset="diy-small.jpg 500w, diy-medium.jpg 1000w, diy-large.jpg 1500w"
+             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
+      </div>
+      <div class="image-item">
+        <img src="painting.jpeg" alt="Painting" class="portfolio-image"
+             srcset="painting-small.jpeg 500w, painting-medium.jpeg 1000w, painting-large.jpeg 1500w"
+             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
+      </div>
+    </div>
   </main>
 </body>
 </html>
